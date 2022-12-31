@@ -11,8 +11,7 @@ fun ScreenMain() {
     val navController = rememberNavController()
     
     NavHost(navController = navController, startDestination = Routes.Login.routes) {
-        composable(Routes.Login.routes) {
-            LoginPage(navController = navController)
-        }
+        composable(Routes.Login.routes) { LoginPage(navController) }
+        composable(Routes.Register.routes) { RegisterPage(navController) }
     }
 }
